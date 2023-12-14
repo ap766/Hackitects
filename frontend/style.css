@@ -1,0 +1,89 @@
+/* default style */
+* {
+    margin: 0;
+    padding: 0;
+    border-style: border-box;
+    font-size: 14px;
+    background-color: #7FD6C2;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px auto 10px;
+}
+
+/* search-bar - Nav */
+.search-inp, .search-btn {
+    border-style: none;
+}
+
+.search-inp {
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.search-btn {
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
+
+/* login-signup-button - Nav */
+.login-signup-btn {
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn, .signup-btn {
+    font-size: 19px;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+}
+
+.login-btn {
+    margin-right: 15px;
+}
+
+/* Intro section */
+.intro {
+    display: flex;
+    height: 56vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .text {
+    margin-right: 75px;
+}
+
+.intro .text p{
+    width: 650px;
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Notices Section */
+.notices {
+    height: 150vw;
+    background-color: #D1EDE7;
+}
+
+/* default elements style */
+input { 
+    background-color: white;
+}
+
+button {
+    border-style: none;
+}
