@@ -41,9 +41,51 @@
 
     <section class="notices">
         <div class="notice1">
-
         </div>
     </section>
+   
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("hi")
+            const postListElement = document.getElementById('notice1');
+            const postForm = document.getElementById('postForm');
+            const apiEndpoint = 'http://localhost:4200/api/post'; // Replace with your actual backend endpoint
+
+            // Function to fetch and render posts
+            function fetchAndRenderPosts() {
+                fetch(apiEndpoint, {
+                    method: 'GET',
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Clear the existing list
+                    postListElement.innerHTML = '';
+
+                    // Render the fetched data
+                    data.forEach(post => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = post.postContent; // Adjust based on your data structure
+                        postListElement.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+            }
+
+            // Fetch and render posts on page load
+            fetchAndRenderPosts();
+
+            // Add an event listener for the form submission
+            postForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Fetch and render posts after submitting the form
+                fetchAndRenderPosts();
+            });
+        });
+    </script>
+       
     <script src="script.js"></script>
 </body>
 </html>
