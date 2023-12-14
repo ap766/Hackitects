@@ -1,46 +1,27 @@
 const post = require('../models/post')
 const mongoose = require('mongoose')
 
-// get all workouts
-const getWorkouts = async (req, res) => {
-  const user_id = req.user._id
-
-  const workouts = await Workout.find({user_id}).sort({createdAt: -1})
-
-  res.status(200).json(workouts)
-}
-
-// get a single workout
-const getWorkout = async (req, res) => {
-  const { id } = req.params
-
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(404).json({error: 'No such workout'})
+// get all posts
+const getPosts = async (req, res) => {
+  try {
+    const posts = await Post.find().sort({ createdAt: -1 });
+    res.status(200).json(posts);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
-
-  const workout = await Workout.findById(id)
-
-  if (!workout) {
-    return res.status(404).json({error: 'No such workout'})
-  }
-  
-  res.status(200).json(workout)
 }
 
 
-// create new workout
+// create new post
 const createWorkout = async (req, res) => {
-  const {title, load, reps} = req.body
+  const {postContent, postImage, postTags} = req.body
 
   let emptyFields = []
 
-  if(!title) {
-    emptyFields.push('title')
+  if(!postContent) {
+    emptyFields.push('content')
   }
-  if(!load) {
-    emptyFields.push('load')
-  }
-  if(!reps) {
+  if(!postTags) {
     emptyFields.push('reps')
   }
   if(emptyFields.length > 0) {
@@ -95,7 +76,7 @@ const updateWorkout = async (req, res) => {
 
 
 module.exports = {
-  getWorkouts,
+  getPosts,
   getWorkout,
   createWorkout,
   deleteWorkout,
