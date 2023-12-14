@@ -1,7 +1,7 @@
-const post = require('../models/post')
+const Post = require('../models/post')
 const mongoose = require('mongoose')
 
-// get all posts
+// get all posts - DONE
 const getPosts = async (req, res) => {
   try {
     const posts = await Post.find().sort({ createdAt: -1 });
@@ -74,11 +74,26 @@ const updateWorkout = async (req, res) => {
   res.status(200).json(workout)
 }
 
+// searching based on tags - DONE
+const searchNotice = async(req, res) =>{
+
+  const searchTags = req.query.tags;
+  
+    try {
+      const posts = await Post.find({ postTags: { $in: searchTags.split('#') } }).sort({ createdAt: -1 });
+      // posts returns [] if posts for the keyword arent found
+      res.json(posts);
+    } catch (error) {
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+}
+
 
 module.exports = {
   getPosts,
   getWorkout,
   createWorkout,
   deleteWorkout,
-  updateWorkout
+  updateWorkout,
+  searchNotice
 }
