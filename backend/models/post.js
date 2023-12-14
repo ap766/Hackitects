@@ -9,6 +9,10 @@ mongoose.connect('',{
 
 // The post schema
 const postSchema = new mongoose.Schema({
+    usn:{
+        type: String,
+        required: true,
+    },
     postContent:{
         type: String,
         required: true,
@@ -23,4 +27,4 @@ const postSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('ost', postSchema)
+module.exports = mongoose.model('post', postSchema)
