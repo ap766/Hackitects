@@ -4,7 +4,11 @@ const mongoose = require('mongoose')
 // get all posts - DONE
 const getPosts = async (req, res) => {
   try {
-    const posts = await Post.find().sort({ createdAt: -1 });
+
+    const posts = await Notice.find().sort({ createdAt: -1 });
+    
+    console.log(posts)
+    console.log(req.body.postTags)
     res.status(200).json(posts);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -12,11 +16,12 @@ const getPosts = async (req, res) => {
 }
 
 // create new post
-const createNotice = async (req, res) => {
+const createNotice = async (req,res) => {
+  
   const {postContent, postImage, postTags} = req.body
-  
+  console.log(req.body)
+  console.log(postContent)
   let emptyFields = []
-  
   // if(!postContent) {
   // emptyFields.push('content')
   // }
@@ -46,6 +51,7 @@ const searchNotice = async(req, res) =>{
       const posts = await Notice.find({ postTags: { $in: searchTags.split(',') } }).sort({ createdAt: -1 });
       // posts returns [] if posts for the keyword arent found
       res.json(posts);
+   
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
     }

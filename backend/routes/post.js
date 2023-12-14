@@ -23,4 +23,5 @@ router.post('/', createNotice)
 
 
 
+
 module.exports = router

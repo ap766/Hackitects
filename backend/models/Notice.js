@@ -1,25 +1,20 @@
-const mongoose = require('mongoose');
-const { buffer } = require('stream/consumers');
+const mongoose = require('mongoose')
 
+const Schema = mongoose.Schema
 
-// The post schema
-const postSchema = new mongoose.Schema({
-    postContent:{
+const postSchema = new Schema({
+    postContent: {
         type: String,
-        required: true,
+        required: false,
     },
-    postImage:{
+    postImage: {
         data: Buffer,
         contentType: String,
     },
-    postTags:{
-        type: [String],
-        required: true,
+    postTags: {
+        type: String,
+        required: false,
     }
-    // usn:{
-    //     type: String,
-    //     required: true,
-    // }
-});
+}, { timestamps: true })
 
-module.exports = mongoose.model('notices', postSchema)
+module.exports = mongoose.model('notice', postSchema)
