@@ -1,4 +1,4 @@
-const Post = require('../models/post')
+const Post = require('../models/Notice')
 const mongoose = require('mongoose')
 
 // get all posts - DONE
