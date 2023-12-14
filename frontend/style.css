@@ -1,0 +1,101 @@
+/* default style */
+* {
+    margin: 0;
+    padding: 0;
+    border-style: border-box;
+    font-size: 14px;
+    background-color: #7FD6C2;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px auto 21px;
+}
+
+/* search-bar - Nav */
+.search-inp, .search-btn {
+    border-style: none;
+}
+
+.search-inp {
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.search-btn {
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
+
+/* login-post-button - Nav */
+.login-post-btn {
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn, .post-btn {
+    font-size: 14px;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    width: 95px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.login-btn {
+    margin-right: 15px;
+}
+
+.login-btn:hover, .post-btn:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+/* Intro section */
+.intro {
+    display: flex;
+    height: 56vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .text {
+    margin-right: 75px;
+    width: 650px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.intro .text .text-out{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 0.95;
+}
+
+.intro .text .text-inside {
+    font-size: 15px;
+}
+
+/* Notices Section */
+.notices {
+    height: 150vw;
+    background-color: #D1EDE7;
+}
+
+/* default elements style */
+input { 
+    background-color: white;
+}
+
+button {
+    border-style: none;
+}
