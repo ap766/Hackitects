@@ -87,8 +87,36 @@ nav {
 
 /* Notices Section */
 .notices {
-    height: 150vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 150vh;
     background-color: #D1EDE7;
+    margin-top: 15px;
+}
+
+.notice1 {
+    display: block;
+    width: 80vw;
+    height: 15vh;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.notice1 .text {
+    font-size: 19px;
+}
+
+.notice1 .tags {
+    font-size: 15px;
+}
+
+.notice1 .text, .tags {
+    background-color: white;
 }
 
 /* default elements style */
