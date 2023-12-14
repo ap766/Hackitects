@@ -15,11 +15,11 @@ const postSchema = new mongoose.Schema({
     postTags:{
         type: [String],
         required: true,
-    },
-    usn:{
-        type: String,
-        required: true,
     }
+    // usn:{
+    //     type: String,
+    //     required: true,
+    // }
 });
 
-module.exports = mongoose.model('Notice', postSchema)
+module.exports = mongoose.model('notices', postSchema)
