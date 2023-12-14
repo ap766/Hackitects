@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts linked -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Playpen+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
     <title>Campus Connect</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Login</h2>
-        <form>
-          <label>
-            Username:
-            <input type="text" id="loginUsername" />
-          </label>
-          <br />
-          <label>
-            Password:
-            <input type="password" id="loginPassword" />
-          </label>
-          <br />
-          <button type="button" onclick="handleLogin()">Login</button>
-        </form>
-      </div>
-    </div>
-  </div>
+    <nav>
+        <div class="search-bar">
+            <input type="text" class="search-inp" placeholder="Search...">
+        </div>
+        <div class="logo">
+            <img src="imgs/logo.png" alt="CampusConnect" height="39px">
+        </div>
+        <div class="login-signup-btn">
+            <button class="login-btn">LOGIN</button>
+            <button class="signup-btn">SIGN UP</button>
+        </div>
+    </nav>
+    <section class="intro">
+        <div class="text">
+            <p>
+                An all in one NoticeBoard for whatever is happening in your Campus
+            </p> 
+        </div>
+        <div class="img">
+            <img src="imgs/board.png" alt="board-image" height="250px">
+        </div>
+    </section>
+
+    <section class="notices">
+        <div class="notice1">
+
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
