@@ -96,27 +96,52 @@ nav {
     margin-top: 15px;
 }
 
-.notice1 {
-    display: block;
-    width: 80vw;
-    height: 15vh;
-    padding: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: white;
-    border-radius: 20px;
+.notices {
+    padding: 20px;
+    background-color: #f8f8f8;
 }
 
-.notice1 .text {
+.postForm {
+    background-color: white;
+}
+
+.postForm li {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px;
+}
+
+.postForm h3 {
     font-size: 19px;
 }
 
-.notice1 .tags {
+.postForm h5 {
     font-size: 15px;
 }
 
-.notice1 .text, .tags {
+.post-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#notice1 li{
+    text-decoration:none;
+    width: 80vw;
     background-color: white;
+}
+
+#notice1 h3{
+    background-color: white;
+}
+
+#notice1 h5{
+    background-color: white;
+    margin-bottom: 15px;
 }
 
 /* default elements style */

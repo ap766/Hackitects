@@ -42,6 +42,40 @@
     </div>
     </div>
   </div>
-  
+  <script>
+    function putThePostOn() {
+        // Get the form data
+        const postContent = document.getElementById('post').value;
+        const postTags = document.getElementById('tag').value;
+
+        // Prepare the data for the POST request
+        const postData = {
+            postContent,
+            postTags
+        };
+
+        // Send a POST request to the API
+        fetch('http://localhost:4200/api/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(postData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response data if needed
+            console.log('Post created successfully:', data);
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        })
+        .catch(error => {
+            console.error('Error creating post:', error);
+            // Handle errors
+        });
+    }
+</script>
+
 </body>
+
 </html>
