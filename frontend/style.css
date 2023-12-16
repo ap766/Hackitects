@@ -55,10 +55,13 @@ nav {
     margin-right: 15px;
 }
 
+
 .login-btn:hover, .post-btn:hover {
     transform: scale(0.9);
     cursor: pointer;
 }
+
+
 
 /* Intro section */
 .intro {
@@ -101,6 +104,8 @@ nav {
     background-color: #f8f8f8;
 }
 
+
+/* Post Forms - Notices Section */
 .postForm {
     background-color: white;
 }
@@ -119,26 +124,19 @@ nav {
     font-size: 15px;
 }
 
-.post-btn {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
+/* heading - post form */
 #notice1 li{
     text-decoration:none;
     width: 80vw;
     background-color: white;
 }
 
+/* post content (text) - post form */
 #notice1 h3{
     background-color: white;
 }
 
+/* tags - post Form */
 #notice1 h5{
     background-color: white;
     margin-bottom: 15px;
