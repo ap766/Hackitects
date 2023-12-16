@@ -196,6 +196,12 @@ body{
 .container #flip{
   display: none;
 }
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 730px) {
   .container .cover{
     display: none;
@@ -204,6 +210,7 @@ body{
   .form-content .signup-form{
     width: 100%;
   }
+
   .form-content .signup-form{
     display: none;
   }
