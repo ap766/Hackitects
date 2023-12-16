@@ -24,48 +24,33 @@ body{
   perspective: 2700px;
 }
 
-.container .cover .text{
-  position: absolute;
-  z-index: 130;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.cover .text .text-1,
-.cover .text .text-2{
-  font-size: 26px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-}
-.cover .text .text-2{
-  font-size: 15px;
-  font-weight: 500;
-}
 .container .forms{
   height: 100%;
   width: 100%;
   background: #fff;
-}
-.container .form-content{
+}   
+.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.form-content .login-form,
-.form-content .signup-form{
+ .login-form,
+ .signup-form{
   width: calc(100% / 2 - 25px);
 }
-.forms .form-content .title{
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forms .title{
   position: relative;
   font-size: 24px;
   font-weight: 500;
   color: #333;
 }
-.forms .form-content .title:before{
+.forms .title:before{
   content: '';
   position: absolute;
   left: 0;
@@ -74,21 +59,28 @@ body{
   width: 25px;
   background: #7FD6C2;
 }
-.forms .signup-form  .title:before{
+.forms .signup-form .title:before{
   width: 20px;
 }
-.forms .form-content .input-boxes{
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 770px;
+}
+
+.forms .input-boxes{
   margin-top: 30px;
 }
-.forms .form-content .input-box{
+.forms  .input-box{
   display: flex;
   align-items: center;
   height: 50px;
-  width: 100%;
+  width: 145px;
   margin: 10px 0;
   position: relative;
 }
-.form-content .input-box input{
+ .input-box input{
   height: 100%;
   width: 100%;
   outline: none;
@@ -99,65 +91,80 @@ body{
   border-bottom: 2px solid rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
-.form-content .input-box input:focus,
-.form-content .input-box input:valid{
+ .input-box input:focus,
+ .input-box input:valid{
   border-color: #7FD6C2;
 }
-.form-content .input-box i{
+ .input-box i{
   position: absolute;
   color: #7FD6C2;
   font-size: 17px;
 }
-.forms .form-content .text{
+.forms .text{
   font-size: 14px;
   font-weight: 500;
   color: #333;
 }
-.forms .form-content .text a{
+.forms .text a{
   text-decoration: none;
 }
-.forms .form-content .text a:hover{
+.forms .text a:hover{
   text-decoration: underline;
 }
-.forms .form-content .button{
+.forms .button{
   color: #fff;
   margin-top: 40px;
 }
-.forms .form-content .button input{
+.forms .button input{
   color: #fff;
   background: #7FD6C2;
   border-radius: 6px;
   padding: 0;
   cursor: pointer;
   transition: all 0.4s ease;
+  width: 150px;
 }
-.forms .form-content .button input:hover{
-  background: #7FD6C2;
+.forms .button input:hover{
+  background: #333;
+  scale: 0.95;
 }
-.forms .form-content label{
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.input-box:hover {
+  transform: scale3d(0.9);
+  transition-duration: 0.3s;
+}
+
+#post,  #tag {
+  padding: 7px;
+}
+
+.forms label{
   color: #7FD6C2;
   cursor: pointer;
 }
-.forms .form-content label:hover{
+.forms label:hover{
   text-decoration: underline;
 }
-.forms .form-content .login-text,
-.forms .form-content .sign-up-text{
+.forms .login-text,
+.forms .sign-up-text{
   text-align: center;
   margin-top: 25px;
 }
-.container #flip{
-  display: none;
-}
+
 @media (max-width: 730px) {
   .container .cover{
     display: none;
   }
-  .form-content .login-form,
-  .form-content .signup-form{
+   .login-form,
+   .signup-form{
     width: 100%;
   }
-  .form-content .signup-form{
+   .signup-form{
     display: none;
   }
   .container #flip:checked ~ .forms .signup-form{
