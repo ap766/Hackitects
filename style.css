@@ -3,8 +3,12 @@
     margin: 0;
     padding: 0;
     border-style: border-box;
+}
+
+body {
     font-size: 14px;
     background-color: #7FD6C2;
+    max-width: 100%;
 }
 
 /* Navigation bar */
@@ -69,6 +73,7 @@ nav {
     height: 56vh;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease-in;
 }
 
 .intro .text {
@@ -93,17 +98,30 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 98.9vw;
     height: 150vh;
     background-color: #D1EDE7;
     margin-top: 15px;
+    transition: all 0.4s ease-in;
 }
 
-.notices {
-    padding: 20px;
-    background-color: #f8f8f8;
+/* heading - post form */
+.notices li{
+    text-decoration:none;
+    width: 78.9vw;
+    background-color: white;
 }
 
+/* post content (text) - post form */
+.notices h3{
+    background-color: white;
+}
+
+/* tags - post Form */
+.notices h5{
+    background-color: white;
+    margin-bottom: 15px;
+}
 
 /* Post Forms - Notices Section */
 .postForm {
@@ -122,24 +140,6 @@ nav {
 
 .postForm h5 {
     font-size: 15px;
-}
-
-/* heading - post form */
-#notice1 li{
-    text-decoration:none;
-    width: 80vw;
-    background-color: white;
-}
-
-/* post content (text) - post form */
-#notice1 h3{
-    background-color: white;
-}
-
-/* tags - post Form */
-#notice1 h5{
-    background-color: white;
-    margin-bottom: 15px;
 }
 
 /* default elements style */
