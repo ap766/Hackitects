@@ -9,6 +9,7 @@ body {
     font-size: 14px;
     background-color: #7FD6C2;
     max-width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Navigation bar */
@@ -16,12 +17,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 10px auto 21px;
+    margin: 0 10px auto 21px;
+    height: 45px;
 }
 
 /* search-bar - Nav */
 .search-inp, .search-btn {
     border-style: none;
+    border-color: #7FD6C2;
 }
 
 .search-inp {
@@ -34,6 +37,11 @@ nav {
 .search-btn {
     padding: 5px 10px 5px 10px;
     font-size: 14px;
+}
+
+.search-inp:hover {
+    border-style: solid;
+    border-bottom-color: #333;
 }
 
 /* login-post-button - Nav */
@@ -61,8 +69,9 @@ nav {
 
 
 .login-btn:hover, .post-btn:hover {
-    transform: scale(0.9);
+    transform: scale(0.95);
     cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 
@@ -79,7 +88,6 @@ nav {
 .intro .text {
     margin-right: 75px;
     width: 650px;
-    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
@@ -99,7 +107,7 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 98.9vw;
-    height: 150vh;
+    height: 100vh;
     background-color: #D1EDE7;
     margin-top: 15px;
     transition: all 0.4s ease-in;
@@ -142,6 +150,89 @@ nav {
     font-size: 15px;
 }
 
+/* Footer Section */
+footer {
+    background-color: #333;
+    color:whitesmoke;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons p{
+    display: flex;
+    justify-content: center;
+    width: 307px;
+}
+
+.social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 40px;
+}
+
+.social-icon a i{
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+.social-icon a i:hover{
+    scale: 0.9;
+    transition: all 0.4s ease;
+    color:#7FD6C2;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    height: 170px;
+    justify-content: space-evenly;    
+}
+
+footer .container .com-name {
+    width: 180px;
+}
+
+#title {
+    line-height: 35px;
+}
+
+.com-name #title{
+    font-size: 19px;
+}
+
+.lists #title{
+    font-size: 19px;
+}
+
+.lists ul li{
+    list-style: none;
+    line-height: 25px;
+}
+
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.copyright a{
+    font-weight: 700;
+}
+
+.copyright a:hover {
+    color: #7FD6C2;
+    scale: 0.95;
+    transition: all 0.4s ease;
+}
+
 /* default elements style */
 input { 
     background-color: white;
@@ -149,4 +240,14 @@ input {
 
 button {
     border-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+hr {
+    /* color: grey; */
+    background-color: grey;
 }
