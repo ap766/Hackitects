@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log("hi")
-    const postListElement = document.getElementById('notice1');
+    const postListElement = document.getElementsByClassName('notices');
     const postForm = document.querySelector('.post-btn');
     const apiEndpoint = 'http://localhost:4200/api/post'; // Replace with your actual backend endpoint
 
