@@ -170,6 +170,7 @@ body{
   color: #fff;
   margin-top: 40px;
 }
+
 .forms .form-content .button input{
   color: #fff;
   background: #7FD6C2;
@@ -179,7 +180,9 @@ body{
   transition: all 0.4s ease;
 }
 .forms .form-content .button input:hover{
-  background: #7FD6C2;
+  background: #333;
+  scale: 0.95;
+  transition: all 0.4s ease;
 }
 .forms .form-content label{
   color: #7FD6C2;
